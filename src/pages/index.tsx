@@ -9,9 +9,19 @@ export default function Home() {
         style={{
           display: "grid",
           gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
-          gap: "32px",
+          gap: "24px",
         }}
       >
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
+        <CardArticle />
         <CardArticle />
         <CardArticle />
       </div>

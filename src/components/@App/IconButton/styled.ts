@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const WrapperIconButton = styled.button`
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   background: none;
   color: ${({ theme }) => theme.colors.text};
   border: none;

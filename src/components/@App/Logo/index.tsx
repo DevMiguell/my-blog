@@ -5,5 +5,5 @@ export default function Logo() {
 }
 
 const Image = styled.img`
-  width: 6rem;
+  width: 5rem;
 `;
