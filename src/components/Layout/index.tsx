@@ -13,7 +13,13 @@ export default function Layout({ children }: Props) {
     <Container>
       <NavBar />
 
-      <main>{children}</main>
+      <main
+        style={{
+          minHeight: "90vh",
+        }}
+      >
+        {children}
+      </main>
 
       <Footer />
     </Container>
