@@ -18,6 +18,13 @@ export const Wrapper = styled.div`
     h2 {
       color: ${({ theme }) => theme.colors.primary};
     }
+
+    i {
+      visibility: visible;
+      opacity: 1;
+      color: ${({ theme }) => theme.colors.primary};
+      transform: translate3D(0px, 0px, 0px);
+    }
   }
 `;
 
@@ -40,6 +47,21 @@ export const Description = styled.p`
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
   }
+`;
+
+export const Icon = styled.i`
+  height: 1rem;
+  visibility: hidden;
+  opacity: 0;
+  transform: translate3D(-20px, 0px, 0px);
+
+  transition: all 0.2s;
+`;
+
+export const WrapperReadMore = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
 `;
 
 export const ReadMore = styled.a`
