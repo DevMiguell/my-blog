@@ -7,11 +7,20 @@ import {
   Icon,
 } from "./styled";
 import { MdArrowForward } from "react-icons/md";
-export default function CardArticle() {
+import Router from "next/router";
+export default function CardArticle(props: {
+  title: string;
+  description: string;
+  slug: string;
+}) {
   return (
-    <Wrapper>
-      <Title>Title</Title>
-      <Description>Description</Description>
+    <Wrapper
+      onClick={() => {
+        Router.push(`posts/${props.slug}`);
+      }}
+    >
+      <Title>{props.title}</Title>
+      <Description>{props.description}</Description>
 
       <WrapperReadMore>
         <ReadMore>Leia mais</ReadMore>

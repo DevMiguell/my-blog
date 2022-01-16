@@ -2,12 +2,10 @@ import { ReactNode } from "react";
 import { WrapperIconButton } from "./styled";
 
 export default function IconButton(props: {
-  children: ReactNode;
+  icon: ReactNode;
   onClick: () => void;
 }) {
   return (
-    <WrapperIconButton onClick={props.onClick}>
-      {props.children}
-    </WrapperIconButton>
+    <WrapperIconButton onClick={props.onClick}>{props.icon}</WrapperIconButton>
   );
 }

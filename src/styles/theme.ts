@@ -6,12 +6,14 @@ const theme = {
     success_light: "rgba(18, 164, 84, 0.5)",
 
     attention: "#ff872c",
-    attention_light: "rgba(255, 135, 44, 0.3)",
+    attention_light: "#ff872c50",
 
     danger: "#e83f5b",
-    danger_light: "rgba(232, 63, 91, 0.5)",
+    danger_light: "#e83f5b50",
 
     text: "#f0f0f0",
+    text_ligth: "#f0f0f080",
+
     background: "#12151F",
   },
 

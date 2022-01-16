@@ -1,30 +1,36 @@
+import { allPostsProps } from "../@types/allPostsProps";
 import CardArticle from "../components/@App/CardArticle";
+import CardsWrapper from "../components/@App/CardsWrapper";
 import HeaderArticlesSection from "../components/@App/HeaderArticlesSection";
+import { getAllPosts } from "../lib/api";
 
-export default function Home() {
+interface Props {
+  allPosts: allPostsProps[];
+}
+export default function Home(props: { allPosts: allPostsProps[] }) {
+  const { allPosts } = props;
+
   return (
     <>
       <HeaderArticlesSection quantity={2} />
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(auto-fill, minmax(400px, 1fr))",
-          gap: "24px",
-        }}
-      >
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-        <CardArticle />
-      </div>
+
+      <CardsWrapper allPosts={allPosts} />
     </>
   );
+}
+
+export async function getStaticProps() {
+  const allPosts = getAllPosts([
+    "title",
+    "date",
+    "slug",
+    "author",
+    "description",
+    "coverImage",
+    "excerpt",
+  ]);
+
+  return {
+    props: { allPosts },
+  };
 }
