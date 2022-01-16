@@ -1,5 +1,5 @@
 import {
-  Wrapper,
+  StyledLink,
   Title,
   Description,
   ReadMore,
@@ -7,27 +7,25 @@ import {
   Icon,
 } from "./styled";
 import { MdArrowForward } from "react-icons/md";
-import Router from "next/router";
+import Link from "next/link";
 export default function CardArticle(props: {
   title: string;
   description: string;
   slug: string;
 }) {
   return (
-    <Wrapper
-      onClick={() => {
-        Router.push(`posts/${props.slug}`);
-      }}
-    >
-      <Title>{props.title}</Title>
-      <Description>{props.description}</Description>
+    <Link href={`posts/${props.slug}`} passHref>
+      <StyledLink>
+        <Title>{props.title}</Title>
+        <Description>{props.description}</Description>
 
-      <WrapperReadMore>
-        <ReadMore>Leia mais</ReadMore>
-        <Icon>
-          <MdArrowForward />
-        </Icon>
-      </WrapperReadMore>
-    </Wrapper>
+        <WrapperReadMore>
+          <ReadMore>Leia mais</ReadMore>
+          <Icon>
+            <MdArrowForward />
+          </Icon>
+        </WrapperReadMore>
+      </StyledLink>
+    </Link>
   );
 }

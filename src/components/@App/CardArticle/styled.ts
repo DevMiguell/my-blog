@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.div`
+export const StyledLink = styled.a`
   display: flex;
   flex-direction: column;
   height: 160px;
   border-radius: 10px;
   background: #80808020;
+  color: ${({ theme }) => theme.colors.text};
   padding: 1.5rem;
   cursor: pointer;
   border: 2px solid transparent;

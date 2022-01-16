@@ -16,6 +16,7 @@ export default function Layout({ children }: Props) {
       <main
         style={{
           minHeight: "90vh",
+          marginBottom: "3rem",
         }}
       >
         {children}

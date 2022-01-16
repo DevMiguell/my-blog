@@ -11,12 +11,7 @@ export default function PostsWrapper(props: { post: allPostsProps }) {
   return (
     <Wrapper>
       <Header>
-        <IconButton
-          onClick={() => {
-            Router.push("/");
-          }}
-          icon={<MdOutlineArrowBackIosNew />}
-        />
+        <IconButton href="/" icon={<MdOutlineArrowBackIosNew />} />
 
         <Title>{post.title}</Title>
 
