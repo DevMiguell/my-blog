@@ -1,7 +1,7 @@
 import Head from "next/head";
 import type { AppProps } from "next/app";
 
-import Layout from "../components/Layout";
+import Layout from "../layout";
 
 import { ThemeProvider } from "styled-components";
 
@@ -12,7 +12,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Head>
-        <title>My Blog</title>
+        <title>Miguel-BLOG</title>
       </Head>
 
       <GlobalStyle />

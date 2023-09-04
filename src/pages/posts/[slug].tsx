@@ -1,5 +1,5 @@
 import { allPostsProps } from "../../@types/allPostsProps";
-import PostsWrapper from "../../components/@App/PostsWrapper";
+import PostsWrapper from "../../components/PostsWrapper";
 import { getAllPosts, getPostBySlug } from "../../lib/api";
 import markdownToHtml from "../../lib/markdownToHtml";
 

@@ -5,7 +5,7 @@ export default function HeaderArticlesSection(props: { quantity: number }) {
 
   return (
     <Wrapper>
-      <Text>CSS</Text>
+      <Text>Posts</Text>
       <TextQuantity>
         {props.quantity} {pluralOrSingular}
       </TextQuantity>

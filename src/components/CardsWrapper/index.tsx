@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { allPostsProps } from "../../../@types/allPostsProps";
 import CardArticle from "../CardArticle";
+import { allPostsProps } from "../../@types/allPostsProps";
 
 export default function CardsWrapper(props: { allPosts: allPostsProps[] }) {
   const { allPosts } = props;

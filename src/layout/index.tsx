@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import Container from "../@App/Container";
+import Container from "../components/Container";
 
 import Footer from "./Footer";
 import NavBar from "./NavBar";

@@ -1,6 +1,6 @@
 const theme = {
   colors: {
-    primary: "#00A4EB",
+    primary: "#F75B20",
 
     success: "#12a454",
     success_light: "rgba(18, 164, 84, 0.5)",
@@ -14,7 +14,7 @@ const theme = {
     text: "#f0f0f0",
     text_ligth: "#f0f0f080",
 
-    background: "#12151F",
+    background: "#191919",
   },
 
   fonts: {
