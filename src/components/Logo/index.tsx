@@ -6,6 +6,10 @@ export default function Logo() {
     <Link href="/">
       <a>
         <Image src="/assets/logo.svg" alt="Imagem escrita CSS" />
+
+        <span style={{ color: "#ccc", marginLeft: "0.5rem", fontSize: "0.8rem" }}>
+        Blog
+        </span>
       </a>
     </Link>
   );

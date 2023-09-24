@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { allPostsProps } from "../@types/allPostsProps";
 import CardArticle from "../components/CardArticle";
 import CardsWrapper from "../components/CardsWrapper";
@@ -9,12 +10,16 @@ interface Props {
 }
 export default function Home(props: { allPosts: allPostsProps[] }) {
   const { allPosts } = props;
+  const tags = allPosts.map(post => post.tag)
 
   return (
     <>
-      <HeaderArticlesSection quantity={allPosts.length} />
-
-      <CardsWrapper allPosts={allPosts} />
+      {tags.map((tag) => (
+        <Fragment key={tag}>
+          <HeaderArticlesSection quantity={allPosts.length} tag={tag}/>
+          <CardsWrapper allPosts={allPosts.filter(post => post.tag === tag)} />
+        </Fragment>
+      ))}
     </>
   );
 }
@@ -28,6 +33,7 @@ export async function getStaticProps() {
     "description",
     "coverImage",
     "excerpt",
+    "tag"
   ]);
 
   return {

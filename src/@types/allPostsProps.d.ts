@@ -5,4 +5,5 @@ export interface allPostsProps {
   slug: string;
   author: string;
   content: string;
+  tag: string;
 }
